@@ -1,0 +1,13 @@
+.example-card{
+    margin: 0 auto;
+    width: 60%;
+}
+
+.mat-card-cvr{
+    width: 100%;
+    text-align:center;
+ }
+
+ .mat-form-field{
+    width:60% !important;
+ }

@@ -1,0 +1,26 @@
+<div class="mat-card-cvr">
+    <mat-form-field>
+       <mat-select placeholder="Select Category" name="productCategory" (selectionChange)="productChangeAction(productCategory)" [(ngModel)]="productCategory" >
+         <mat-option *ngFor="let category of categoryList" [value]="category.categoryId" >{{ category.categoryName }}</mat-option>
+       </mat-select>
+     </mat-form-field> 
+     <br>
+     <br>
+     <mat-form-field *ngIf="loadProduct">
+        <mat-select placeholder="Select Product" name="product" (selectionChange)="productChange(product)" [(ngModel)]="product" >
+          <mat-option *ngFor="let product of productList" [value]="product.productId" >{{ product.productName }}</mat-option>
+        </mat-select>
+      </mat-form-field> 
+ 
+      <mat-form-field>
+        <mat-select placeholder="Top Product By" name="productBY" (selectionChange)="getList(productBY)" [(ngModel)]="productBY" >
+          <mat-option value="price" >Price</mat-option>
+          <mat-option value="quantity" >Quantity</mat-option>
+        </mat-select>
+      </mat-form-field> 
+
+
+    </div>
+     <Br/>
+     <Br/>
+   

@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* for sidenav to take a whole page */
+html, body { 
+    margin: 0;
+    height: 100%;
+}
+
+.example-card{
+    margin: 0 auto;
+    width: 60%;
+}
+
+.mat-card-cvr {
+    width: 100%;
+    text-align:center;
+ }
+
+ .mat-form-field{
+    width:60% !important;
+ }

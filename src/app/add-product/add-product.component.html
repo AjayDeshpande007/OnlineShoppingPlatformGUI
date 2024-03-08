@@ -1,0 +1,52 @@
+<div class="mat-card-cvr">
+<mat-card class="example-card">
+    <mat-card-title>Add Product Form</mat-card-title>
+  <mat-card-content>
+  <form [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+  <p>
+    <mat-form-field appearance="outline">
+    <mat-label>Product Name</mat-label>
+      <input type="text" matInput placeholder="Product Name" formControlName="productName">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+        <mat-label>Product Price</mat-label> 
+      <input type="text" matInput placeholder="Product Price" formControlName="productPrice">
+    </mat-form-field>
+  </p>
+  
+  <p>
+    <mat-form-field appearance="outline">
+        <mat-label>Product Quantity</mat-label>
+      <input type="text" matInput placeholder="Product Quantity" formControlName="productQuantity">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+        <mat-label>Payment Mode</mat-label>
+      <input type="text" matInput placeholder="Payment Mode" formControlName="paymentmode">
+    </mat-form-field>
+  </p>
+  <p>
+    <!-- <mat-form-field appearance="outline">
+        <mat-label>Category Id</mat-label>
+      <input type="text" matInput placeholder="Category Id" formControlName="categoryId">
+    </mat-form-field> -->
+    <mat-form-field>
+      <mat-select placeholder="Select Category" name="productCategory"  formControlName="categoryId" >
+        <mat-option *ngFor="let category of categoryList" [value]="category.categoryId" >{{ category.categoryName }}</mat-option>
+      </mat-select>
+    </mat-form-field>  
+  </p>
+
+  
+  <div class="button">
+    <button type="submit" mat-raised-button color="primary">Add Product</button> &nbsp;&nbsp;&nbsp;
+    <button type="reset" mat-raised-button color="warn">Reset Form</button>  
+</div>
+  
+  </form>
+  </mat-card-content>
+  </mat-card>
+</div>

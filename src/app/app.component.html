@@ -1,0 +1,34 @@
+ <mat-toolbar color="primary">
+    <span class="fill-remaining-space">
+      <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <span (mouseleave)="menuTrigger.closeMenu()">
+        <button mat-menu-item>
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+    </button>
+    <button mat-menu-item>
+          <mat-icon>people_outline</mat-icon>
+          <span>About Us</span>
+        </button>
+    <button mat-menu-item>
+          <mat-icon>call</mat-icon>
+          <span>Contact US</span>
+        </button>
+    <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+    </span>
+    </mat-menu>
+    </span>
+    <span class="fill-remaining-space">Online Shopping Application</span>
+  </mat-toolbar>
+  <app-admin *ngIf="isAdminLoggedIn"></app-admin>
+  <app-user *ngIf="isUserLoggedIn"></app-user>
+  <router-outlet></router-outlet>
+  <div style="position: relative; text-align: center">
+    <p style="position: fixed; bottom: 0; width:100%;"><b> @ this web application designed and developed by Mrs.Swati G Dhawale (ST7107620)</b></p>
+  </div>

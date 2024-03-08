@@ -1,0 +1,38 @@
+
+<div class="mat-card-cvr">
+    <mat-card class="example-card">
+        <mat-card-title>Add Product Comment Form</mat-card-title>
+      <mat-card-content>
+      <form [formGroup]="addProductCommentForm" (ngSubmit)="addProductComment()">
+    
+    <mat-form-field>
+       <mat-select placeholder="Select Category" name="productCategoryId" formControlName="productCategoryId" (selectionChange)="productChangeAction(productCategory)" [(ngModel)]="productCategory" >
+         <mat-option *ngFor="let category of categoryList" [value]="category.categoryId" >{{ category.categoryName }}</mat-option>
+       </mat-select>
+     </mat-form-field> 
+     <br>
+     <br>
+     <mat-form-field *ngIf="loadProduct">
+        <mat-select placeholder="Select Product" formControlName="productId" name="product" (selectionChange)="productChange(product)" [(ngModel)]="product" >
+          <mat-option *ngFor="let product of productList" [value]="product.productId" >{{ product.productName }}</mat-option>
+        </mat-select>
+      </mat-form-field> 
+      <br>
+      <br>
+      <mat-form-field appearance="outline">
+        <mat-label>Product Comment</mat-label>
+      <input type="text" matInput placeholder="Product Comment" formControlName="comments" [(ngModel)]="productComment">
+    </mat-form-field>
+
+    <br>
+    <br>
+    <div class="button">
+        <button type="submit" mat-raised-button color="primary">Add Comment</button>  &nbsp;&nbsp;&nbsp;
+        <button type="reset" mat-raised-button color="warn">Reset</button>  
+    </div>
+    
+</form>
+</mat-card-content>
+</mat-card>
+</div><br>
+<br>

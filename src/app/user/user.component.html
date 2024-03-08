@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+<!--    <button mat-button [matMenuTriggerFor]="usermenu">Menu</button>
+ <mat-menu #usermenu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu> -->
+    <span class="fill-remaining-space">Welcome to user login</span>&nbsp;&nbsp;
+    <button mat-raised-button color="accent"><a [routerLink]="['/user-cart']">User-Cart</a></button>&nbsp;&nbsp;
+    <!-- <button mat-raised-button color="accent"><a [routerLink]="['/add-to-cart']">Add To Cart</a></button>&nbsp;&nbsp;
+    <button mat-raised-button color="accent"><a [routerLink]="['/buy-from-cart']">Buy From Cart</a></button>&nbsp;&nbsp; -->
+    <button mat-raised-button color="accent"><a [routerLink]="['/view-all-product']">View All Product</a></button>&nbsp;&nbsp;
+    <button mat-raised-button color="accent"><a [routerLink]="['/view-all-purchase-item']">View All Purchase Item</a></button>&nbsp;&nbsp;
+    <button mat-raised-button color="accent"><a [routerLink]="['/top-selling-item']">Top Selling Item</a></button>&nbsp;&nbsp;
+    <button mat-raised-button color="accent"><a [routerLink]="['/view-offers']">View Offers</a></button>&nbsp;&nbsp;
+    <button mat-raised-button color="accent"><a [routerLink]="['/view-comment']">View Comment</a></button>&nbsp;&nbsp;
+    <button mat-raised-button color="accent"><a [routerLink]="['/add-comment']">Add Comment</a></button>&nbsp;&nbsp;
+  </mat-toolbar>
